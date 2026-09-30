@@ -71,7 +71,9 @@
                 
                 <!-- Column 1: Brand & Socials -->
                 <div class="lg:pr-8">
-                    <h3 class="text-white text-2xl font-extrabold tracking-wider mb-6">JEDOPAB <span class="text-brand-gold">CONSULT</span></h3>
+                    <a href="/" class="inline-block mb-6 transition-transform hover:scale-105 duration-300">
+                        <img src="{{ asset('images/logo-footer.png') }}" alt="Jedopab Consult" class="h-12 w-auto">
+                    </a>
                     <p class="text-sm text-gray-400 leading-relaxed mb-8">
                         Reliable capability development, strategic consulting, infrastructure, and supply chain solutions across Nigeria.
                     </p>
