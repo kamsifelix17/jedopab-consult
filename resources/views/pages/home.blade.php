@@ -4,172 +4,194 @@
 
 @section('content')
 
-<!-- 1. HERO SECTION (Video Background with Sound Toggle) -->
-<section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-    <!-- Video Background (Replace src with actual client video later) -->
-    <video id="heroVideo" autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover">
-        <!-- Placeholder video link for development -->
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-business-people-walking-in-a-modern-office-building-42721-large.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <!-- Dark Overlay for Text Readability -->
-    <div class="absolute z-10 inset-0 bg-brand-navy/80"></div>
-
-    <!-- Hero Content -->
-    <div class="relative z-20 text-center px-4 max-w-5xl mx-auto mt-16">
-        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-            Strategic Insight, <span class="text-brand-gold">Sustainable Impact</span>
-        </h1>
-        <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
-            Empowering Government Parastatals, Corporate Bodies, and NGOs with integrated solutions in Training, Consultancy, Project Management, and Logistics.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/services" class="bg-brand-gold text-brand-navy px-8 py-3 rounded-md font-bold hover:bg-yellow-500 transition duration-300 shadow-lg text-lg">
-                Explore Our Services
-            </a>
-            <a href="/contact" class="bg-transparent border border-white text-white px-8 py-3 rounded-md font-bold hover:bg-white hover:text-brand-navy transition duration-300 text-lg">
-                Partner With Us
-            </a>
-        </div>
-    </div>
-
-    <!-- Custom Sound Toggle Button -->
-    <button id="muteToggle" class="absolute z-30 bottom-10 right-10 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full backdrop-blur-sm transition duration-300 border border-white/20">
-        <svg id="muteIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <!-- Default: Muted Icon -->
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>
-        </svg>
-    </button>
-</section>
-
-<!-- 2. VALUE PROPOSITION SECTION -->
-<section class="py-20 bg-brand-light">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-brand-navy mb-4">Our Core Pillars</h2>
-            <div class="w-24 h-1 bg-brand-gold mx-auto"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Pillar 1 -->
-            <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-deep hover:-translate-y-2 transition duration-300">
-                <div class="w-14 h-14 bg-brand-navy text-brand-gold rounded-full flex items-center justify-center mb-6 text-2xl">
-                    <!-- Icon placeholder -->
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                </div>
-                <h3 class="text-xl font-bold text-brand-navy mb-3">Developing People</h3>
-                <p class="text-gray-600">Equipping individuals and teams with the knowledge, competencies, and mindset required to perform effectively and bridge the gap between learning and workplace results.</p>
-            </div>
-
-            <!-- Pillar 2 -->
-            <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-deep hover:-translate-y-2 transition duration-300">
-                <div class="w-14 h-14 bg-brand-navy text-brand-gold rounded-full flex items-center justify-center mb-6 text-2xl">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                </div>
-                <h3 class="text-xl font-bold text-brand-navy mb-3">Transforming Organizations</h3>
-                <p class="text-gray-600">Identifying challenges, improving processes, and developing practical strategies that support sustainable growth and respond effectively to changing business realities.</p>
-            </div>
-
-            <!-- Pillar 3 -->
-            <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-deep hover:-translate-y-2 transition duration-300">
-                <div class="w-14 h-14 bg-brand-navy text-brand-gold rounded-full flex items-center justify-center mb-6 text-2xl">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                </div>
-                <h3 class="text-xl font-bold text-brand-navy mb-3">Delivering Impact</h3>
-                <p class="text-gray-600">Supporting clients in translating plans into action through efficient execution, ensuring quality, cost-effectiveness, and professional accountability.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 3. MINI ABOUT SECTION (CEO Message) -->
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
-        <div class="lg:w-1/2">
-            <div class="bg-brand-light rounded-lg p-2 h-96 relative overflow-hidden shadow-lg border border-gray-200">
-                <!-- Replace with an actual image of the CEO or Corporate Building later -->
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Professional" class="w-full h-full object-cover rounded">
-                <div class="absolute bottom-0 left-0 right-0 bg-brand-navy/90 text-white p-4 backdrop-blur-sm">
-                    <p class="font-bold text-lg">Adedotun Oluwatosin</p>
-                    <p class="text-sm text-brand-gold">BSc, MSc, SPHRi, FIMC, FITD, ACIPM</p>
-                    <p class="text-xs text-gray-300">Chief Executive Officer / Lead Consultant</p>
-                </div>
-            </div>
-        </div>
-        <div class="lg:w-1/2">
-            <span class="text-brand-deep font-bold tracking-wider uppercase text-sm">Message From The CEO</span>
-            <h2 class="text-3xl font-bold text-brand-navy mt-2 mb-6">Turning Knowledge Into Capability</h2>
-            <p class="text-gray-600 mb-4 leading-relaxed">
-                "Welcome to Jedopab Consult Limited. In today's rapidly changing business environment, organizations need more than ideas—they need the right knowledge, capabilities, strategies, and reliable execution to achieve sustainable growth."
-            </p>
-            <p class="text-gray-600 mb-8 leading-relaxed">
-                "As we grow, our ambition is to build a trusted brand with local relevance and global standards, creating meaningful impact through people development, organizational transformation, and effective service delivery."
-            </p>
-            <a href="/about" class="inline-flex items-center text-brand-navy font-bold hover:text-brand-deep transition duration-300 group">
-                Read Full Profile 
-                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- 4. TRUST INDICATORS (Target Audience Grid) -->
-<section class="py-16 bg-brand-navy text-white border-y border-brand-deep">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-        <p class="text-brand-gold font-semibold uppercase tracking-widest text-sm mb-8">Trusted By & Tailored For</p>
-        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80">
-            <div class="flex items-center space-x-2">
-                <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                <span class="font-bold text-lg">Government Parastatals</span>
-            </div>
-            <div class="flex items-center space-x-2">
-                <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                <span class="font-bold text-lg">Corporate Bodies</span>
-            </div>
-            <div class="flex items-center space-x-2">
-                <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span class="font-bold text-lg">Non-Governmental Organizations</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 5. CLOSING CTA -->
-<section class="py-24 bg-brand-light relative overflow-hidden">
-    <!-- Background Decoration -->
-    <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-deep rounded-full opacity-5"></div>
-    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-navy rounded-full opacity-5"></div>
+<!-- 1. HERO SECTION (LARBEC-style Image Background) -->
+<section class="bg-brand-navy relative pt-32 pb-32 lg:pt-40 lg:pb-40 overflow-hidden z-10">
+    <!-- The LARBEC-style Background Image Blend -->
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Corporate Office" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30">
     
-    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-        <h2 class="text-4xl font-bold text-brand-navy mb-6">Ready to Accelerate Your Organization's Growth?</h2>
-        <p class="text-lg text-gray-600 mb-10">Partner with us for integrated people, organizational, project, and operational solutions designed to achieve sustainable results.</p>
-        <a href="/contact" class="inline-block bg-brand-navy text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-brand-deep transition duration-300 shadow-xl hover:-translate-y-1">
-            Schedule a Consultation
+    <!-- Subtle Background Glow -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-deep rounded-full blur-3xl opacity-30 transform translate-x-1/3 -translate-y-1/3 z-0"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center lg:text-left flex flex-col lg:flex-row items-center">
+        <!-- Hero Text -->
+        <div class="lg:w-3/5">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-deep/50 border border-brand-gold/30 text-brand-gold text-xs font-bold tracking-widest uppercase mb-6">
+                Leading Consulting Firm
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                Building Capability That <span class="text-brand-gold">Powers Progress.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto lg:mx-0">
+                We empower Government Parastatals, Corporate Bodies, and NGOs with integrated solutions in Capacity Development, Project Execution, and Logistics.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                <a href="/services" class="bg-brand-gold text-brand-navy px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition duration-300 shadow-[0_8px_30px_rgb(212,175,55,0.3)] text-lg">
+                    Explore Solutions
+                </a>
+                <a href="/contact" class="bg-transparent border border-white/30 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-brand-navy transition duration-300 text-lg">
+                    Partner With Us
+                </a>
+            </div>
+        </div>
+        
+        <!-- Optional Hero Image (Hidden on mobile, visible on desktop) -->
+        <div class="hidden lg:block lg:w-2/5 pl-12 relative">
+            <div class="absolute inset-0 bg-brand-gold rounded-3xl transform translate-x-4 translate-y-4 opacity-50"></div>
+            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Team" class="rounded-3xl shadow-2xl relative z-10 w-full h-[400px] object-cover">
+        </div>
+    </div>
+</section>
+
+<!-- OVERLAPPING BOTTOM CARD (The "Quick Stats/Pillars") -->
+<div class="relative z-30 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 md:-mt-24">
+    <div class="bg-white rounded-3xl shadow-[0_20px_50px_rgba(10,31,68,0.1)] p-8 md:p-12 border border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+        <div class="flex-1 text-center py-4 md:py-0 md:px-6 w-full">
+            <h3 class="text-2xl md:text-3xl font-black text-brand-navy mb-1">Developing</h3>
+            <p class="text-gray-500 font-medium text-sm md:text-base">People & Capacity</p>
+        </div>
+        <div class="flex-1 text-center py-4 md:py-0 md:px-6 w-full">
+            <h3 class="text-2xl md:text-3xl font-black text-brand-navy mb-1">Transforming</h3>
+            <p class="text-gray-500 font-medium text-sm md:text-base">Organizations & Strategy</p>
+        </div>
+        <div class="flex-1 text-center py-4 md:py-0 md:px-6 w-full">
+            <h3 class="text-2xl md:text-3xl font-black text-brand-navy mb-1">Delivering</h3>
+            <p class="text-gray-500 font-medium text-sm md:text-base">Sustainable Impact</p>
+        </div>
+    </div>
+</div>
+
+<!-- 2. IMAGE-BASED SERVICES SECTION -->
+<!-- pt-32 provides padding to ensure the overlapping card clears safely -->
+<section class="bg-slate-50 pt-32 pb-24 z-0 relative -mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-brand-deep font-bold tracking-widest uppercase text-sm mb-2 block">Our Expertise</span>
+            <h2 class="text-4xl font-extrabold text-brand-navy mb-6">Integrated solutions across the capability and infrastructure chain.</h2>
+        </div>
+
+        <!-- 4-Column Image Card Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            
+            <!-- Card 1 -->
+            <a href="/services" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Training" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-brand-navy/20 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Training & Capacity</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Equipping individuals and teams with essential leadership and behavioural competencies.</p>
+                    <div class="flex items-center text-brand-gold font-bold text-sm">
+                        Read More <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="/services" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Consultancy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-brand-navy/20 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Organizational Consultancy</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Improving processes and developing practical strategies that support sustainable growth.</p>
+                    <div class="flex items-center text-brand-gold font-bold text-sm">
+                        Read More <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="/services" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Project Management" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-brand-navy/20 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Project Management</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Translating complex plans into action through efficient, accountable execution.</p>
+                    <div class="flex items-center text-brand-gold font-bold text-sm">
+                        Read More <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="/services" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Supply & Logistics" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-brand-navy/20 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Supply & Logistics</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Reliable operational solutions with an uncompromising focus on quality standards.</p>
+                    <div class="flex items-center text-brand-gold font-bold text-sm">
+                        Read More <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        
+        <div class="mt-16 text-center">
+            <a href="/services" class="inline-block bg-brand-navy text-white px-8 py-3 rounded-full font-bold hover:bg-brand-deep transition shadow-lg">View All Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- 3. HIGH-CONTRAST DARK SECTION (CEO / Impact) -->
+<section class="py-24 bg-brand-navy text-white relative overflow-hidden">
+    <!-- Decorative overlapping circle -->
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-deep rounded-full blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+            <h2 class="text-4xl font-extrabold mb-6 leading-tight">Lead with integrity, deliver with excellence.</h2>
+            <div class="w-20 h-1 bg-brand-gold mb-6"></div>
+            <p class="text-xl text-gray-300 mb-8 leading-relaxed font-light">
+                "In today's rapidly changing business environment, organizations need more than ideas. They need the right knowledge, capabilities, strategies, and reliable execution to achieve sustainable growth."
+            </p>
+            <div class="flex items-center gap-4">
+                <!-- Replace with client headshot -->
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Adedotun Oluwatosin" class="w-16 h-16 rounded-full border-2 border-brand-gold object-cover">
+                <div>
+                    <p class="font-bold text-lg">Adedotun Oluwatosin</p>
+                    <p class="text-brand-gold text-sm">CEO / Lead Consultant</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Modern Info Cards on Dark Background -->
+            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition">
+                <div class="w-12 h-12 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold mb-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <h4 class="font-bold text-xl mb-2">Integrity First</h4>
+                <p class="text-sm text-gray-400">Honesty, transparency, and ethical conduct in every engagement.</p>
+            </div>
+            
+            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition">
+                <div class="w-12 h-12 bg-brand-gold/20 rounded-full flex items-center justify-center text-brand-gold mb-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h4 class="font-bold text-xl mb-2">Sustainable Impact</h4>
+                <p class="text-sm text-gray-400">Practical solutions that produce lasting improvements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. BOTTOM LEAD CAPTURE (Full Width Call to Action) -->
+<section class="py-20 bg-brand-gold">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy mb-6">Have a procurement or project need?</h2>
+        <p class="text-lg text-brand-navy/80 mb-8 font-medium">Get in touch to discuss how we can help your organization succeed.</p>
+        <a href="/contact" class="inline-block bg-brand-navy text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-900 transition duration-300 shadow-xl hover:-translate-y-1">
+            Contact Our Team
         </a>
     </div>
 </section>
-
-<!-- JavaScript for Video Audio Toggle -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const video = document.getElementById('heroVideo');
-        const muteBtn = document.getElementById('muteToggle');
-        const muteIcon = document.getElementById('muteIcon');
-
-        muteBtn.addEventListener('click', function() {
-            if(video.muted) {
-                // Turn sound ON
-                video.muted = false;
-                muteIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5 10v4a2 2 0 002 2h2.586l3.707 3.707A.996.996 0 0015 19V5a.996.996 0 00-1.707-.707L7.586 10H7a2 2 0 00-2 2z"></path>`;
-            } else {
-                // Turn sound OFF (Muted)
-                video.muted = true;
-                muteIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>`;
-            }
-        });
-    });
-</script>
 
 @endsection
