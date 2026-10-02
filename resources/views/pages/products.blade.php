@@ -20,15 +20,14 @@
 <section class="py-24 bg-slate-50 min-h-[500px]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- SUCCESS BANNER -->
         @if (session('success'))
-            <div class="mb-12 bg-green-50 border-l-4 border-green-500 p-4 rounded-r-md shadow-sm flex items-center justify-between">
+            <div id="auto-dismiss-alert" class="mb-12 bg-green-50 border-l-4 border-green-500 p-4 rounded-r-md shadow-sm flex items-center justify-between transition-opacity duration-500">
                 <div class="flex items-center">
-                    <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <i class="bi bi-check-circle-fill text-green-500 mr-3 text-xl"></i>
                     <p class="text-green-700 font-bold">{{ session('success') }}</p>
                 </div>
-                <button onclick="this.parentElement.style.display='none'" class="text-green-500 hover:text-green-700">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <button onclick="this.parentElement.style.display='none'" class="text-green-500 hover:text-green-700 text-xl">
+                    <i class="bi bi-x"></i>
                 </button>
             </div>
         @endif
@@ -74,20 +73,21 @@
     </div>
 </section>
 
-<!-- 3. CHECKOUT MODAL (Modern Soft-Gray Style) -->
+<!-- 3. CHECKOUT MODAL (Responsive Scroll Fix) -->
 <div id="checkoutModal" class="fixed inset-0 z-50 hidden bg-brand-navy/90 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
-    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl overflow-hidden transform scale-95 transition-transform duration-300 relative" id="modalContent">
+    <!-- Added max-h-[90vh] and overflow-y-auto to allow internal scrolling on mobile -->
+    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300 relative" id="modalContent">
         
         <!-- Close Button -->
-        <button onclick="closeCheckoutModal()" class="absolute top-6 right-6 text-gray-400 hover:text-brand-navy transition z-20 bg-gray-100 rounded-full p-2">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-gray-500 hover:text-brand-navy transition z-20 bg-gray-100 hover:bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center">
+            <i class="bi bi-x-lg"></i>
         </button>
 
-        <div class="flex flex-col md:flex-row">
+        <div class="flex flex-col md:flex-row h-full">
             <!-- Left: Bank Details -->
-            <div class="md:w-5/12 bg-slate-50 p-10 md:p-12 border-b md:border-b-0 md:border-r border-gray-100 flex flex-col justify-center">
-                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-brand-navy mb-6 shadow-sm">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+            <div class="md:w-5/12 bg-slate-50 p-8 md:p-12 border-b md:border-b-0 md:border-r border-gray-100 flex flex-col justify-center">
+                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-brand-navy mb-6 shadow-sm text-2xl">
+                    <i class="bi bi-bank2"></i>
                 </div>
                 <h4 class="font-extrabold text-brand-navy mb-4 text-2xl">Bank Transfer</h4>
                 <p class="text-sm text-gray-500 mb-8 leading-relaxed font-medium">Make your payment to the corporate account below. Once transferred, upload the receipt to finalize your request.</p>

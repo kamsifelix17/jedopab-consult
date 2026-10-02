@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Jedopab Consult Limited')</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased text-gray-800 bg-white selection:bg-brand-gold selection:text-brand-navy">
@@ -65,79 +66,81 @@
     </main>
 
     <!-- LARBEC-STYLE FOOTER -->
-    <footer class="bg-brand-navy text-gray-300 pt-20 pb-8 border-t-[6px] border-brand-gold">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                
-                <!-- Column 1: Brand & Socials -->
-                <div class="lg:pr-8">
-                    <a href="/" class="inline-block mb-6 transition-transform hover:scale-105 duration-300">
-                        <img src="{{ asset('images/logo-footer.png') }}" alt="Jedopab Consult" class="h-12 w-auto">
-                    </a>
-                    <p class="text-sm text-gray-400 leading-relaxed mb-8">
-                        Reliable capability development, strategic consulting, infrastructure, and supply chain solutions across Nigeria.
-                    </p>
-                    <div class="flex space-x-3">
-                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.769-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"/></svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Column 2: Company -->
-                <div>
-                    <h4 class="text-white text-lg font-bold mb-6">Company</h4>
-                    <ul class="space-y-3 text-sm font-medium">
-                        <li><a href="/" class="text-gray-400 hover:text-brand-gold transition">Home</a></li>
-                        <li><a href="/about" class="text-gray-400 hover:text-brand-gold transition">About Us</a></li>
-                        <li><a href="/services" class="text-gray-400 hover:text-brand-gold transition">Services</a></li>
-                        <li><a href="/products" class="text-gray-400 hover:text-brand-gold transition">Products</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Services -->
-                <div>
-                    <h4 class="text-white text-lg font-bold mb-6">Services</h4>
-                    <ul class="space-y-3 text-sm font-medium">
-                        <li><a href="/services#training" class="text-gray-400 hover:text-brand-gold transition">Training & Capacity</a></li>
-                        <li><a href="/services#consultancy" class="text-gray-400 hover:text-brand-gold transition">Consultancy</a></li>
-                        <li><a href="/services#project-management" class="text-gray-400 hover:text-brand-gold transition">Project Management</a></li>
-                        <li><a href="/services#logistics" class="text-gray-400 hover:text-brand-gold transition">Supply & Logistics</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 4: Contact -->
-                <div>
-                    <h4 class="text-white text-lg font-bold mb-6">Get in Touch</h4>
-                    <ul class="space-y-4 text-sm">
-                        <li class="flex items-start">
-                            <span class="text-brand-gold mr-3">📧</span>
-                            <span class="text-gray-400">jedopabconsult@gmail.com</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-gold mr-3">📞</span>
-                            <span class="text-gray-400">0806 655 5802<br>0803 517 5743</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-gold mr-3">📍</span>
-                            <span class="text-gray-400">5, Twin Obasa Street,<br>Gbagada, Lagos.</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
+<footer class="bg-brand-navy text-gray-300 pt-20 pb-8 border-t-[6px] border-brand-gold">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             
-            <!-- Bottom Copyright Bar -->
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-medium">
+            <!-- Column 1: Brand & Socials -->
+            <div class="lg:pr-8">
+                <a href="/" class="inline-block mb-6 transition-transform hover:scale-105 duration-300">
+                    <img src="{{ asset('images/logo-footer.png') }}" alt="Jedopab Consult" class="h-12 w-auto">
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed mb-8">
+                    Reliable capability development, strategic consulting, infrastructure, and supply chain solutions across Nigeria.
+                </p>
+                <!-- Bootstrap Social Icons -->
+                <div class="flex space-x-3">
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10 text-lg">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10 text-lg">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10 text-lg">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10 text-lg">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Company -->
+            <div>
+                <h4 class="text-white text-lg font-bold mb-6">Company</h4>
+                <ul class="space-y-3 text-sm font-medium">
+                    <li><a href="/" class="text-gray-400 hover:text-brand-gold transition">Home</a></li>
+                    <li><a href="/about" class="text-gray-400 hover:text-brand-gold transition">About Us</a></li>
+                    <li><a href="/services" class="text-gray-400 hover:text-brand-gold transition">Services</a></li>
+                    <li><a href="/products" class="text-gray-400 hover:text-brand-gold transition">Products</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div>
+                <h4 class="text-white text-lg font-bold mb-6">Services</h4>
+                <ul class="space-y-3 text-sm font-medium">
+                    <li><a href="/services#training" class="text-gray-400 hover:text-brand-gold transition">Training & Capacity</a></li>
+                    <li><a href="/services#consultancy" class="text-gray-400 hover:text-brand-gold transition">Consultancy</a></li>
+                    <li><a href="/services#project-management" class="text-gray-400 hover:text-brand-gold transition">Project Management</a></li>
+                    <li><a href="/services#logistics" class="text-gray-400 hover:text-brand-gold transition">Supply & Logistics</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div>
+                <h4 class="text-white text-lg font-bold mb-6">Get in Touch</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start">
+                        <i class="bi bi-envelope-fill text-brand-gold mr-3 text-lg"></i>
+                        <span class="text-gray-400">jedopabconsult@gmail.com</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="bi bi-telephone-fill text-brand-gold mr-3 text-lg"></i>
+                        <span class="text-gray-400">0806 655 5802<br>0803 517 5743</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="bi bi-geo-alt-fill text-brand-gold mr-3 text-lg"></i>
+                        <span class="text-gray-400">5, Twin Obasa Street,<br>Gbagada, Lagos.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Bottom Copyright & ImpactDev Signature -->
+        <div class="border-t border-white/10 pt-8 flex flex-col justify-center items-center text-center space-y-6">
+            
+            <div class="text-xs text-gray-500 font-medium w-full flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
                     <a href="/login" class="hover:text-white transition cursor-default">&copy;</a> {{ date('Y') }} Jedopab Consult Limited. All rights reserved.
                 </div>
@@ -146,27 +149,66 @@
                     <a href="#" class="hover:text-white transition">Terms of Service</a>
                 </div>
             </div>
-        </div>
-    </footer>
 
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const btn = document.getElementById('mobileMenuBtn');
-            const menu = document.getElementById('mobileMenu');
-            const icon = document.getElementById('menuIcon');
-            
-            if(btn) {
-                btn.addEventListener('click', () => {
-                    menu.classList.toggle('hidden');
-                    if (menu.classList.contains('hidden')) {
-                        icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-                    } else {
-                        icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-                    }
-                });
-            }
-        });
-    </script>
+            <!-- ImpactDev Signature -->
+            <div class="pt-4 flex flex-col items-center justify-center w-full">
+                <!-- Signature Divider -->
+                <div class="flex items-center justify-center gap-3 mb-2">
+                    <span class="w-8 h-px bg-slate-700"></span>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-500">
+                        Crafted with precision
+                    </span>
+                    <span class="w-8 h-px bg-slate-700"></span>
+                </div>
+
+                <!-- Replace '#' with your actual ImpactDev URL once ready -->
+                <p class="text-xs text-slate-500 tracking-wide">
+                    Website by
+                    <a href="https://theimpactdev.com" target="_blank" class="font-serif text-slate-300 tracking-normal ml-1 hover:text-brand-gold transition duration-300">
+                        ImpactDev
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+    <!-- Master Frontend JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // 1. Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        const icon = document.getElementById('menuIcon');
+        
+        if(btn) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (menu.classList.contains('hidden')) {
+                    icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                } else {
+                    icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                }
+            });
+        }
+
+        // 2. Auto-Dismiss Success Alert Logic
+        const alertBox = document.getElementById('auto-dismiss-alert');
+        if (alertBox) {
+            setTimeout(() => {
+                // Trigger the fade out
+                alertBox.classList.add('opacity-0');
+                
+                // Wait for the CSS transition to finish, then remove from layout
+                setTimeout(() => {
+                    alertBox.style.display = 'none';
+                }, 500); 
+            }, 4000); // 4000ms = 4 seconds before dismissing
+        }
+        
+    });
+</script>
 </body>
 </html>
