@@ -124,9 +124,8 @@
                     </div>
 
                     <div class="pt-2 flex flex-col sm:flex-row gap-4 items-center">
-                        <button type="submit" class="w-full sm:w-auto bg-brand-gold text-brand-navy px-10 py-4 rounded-full font-extrabold hover:bg-yellow-500 transition shadow-[0_8px_20px_rgb(212,175,55,0.3)] flex items-center justify-center">
-                            Send Message
-                            <i class="bi-chat-text"></i> 
+                        <button type="submit" class="w-full sm:w-auto bg-brand-gold text-brand-navy px-10 py-4 rounded-full font-extrabold hover:bg-yellow-500 transition shadow-[0_8px_20px_rgb(212,175,55,0.3)] flex items-center justify-center gap-2">Send Message 
+                            <i class="bi bi-chat-text text-lg"></i>
                         </button>
                         
                         <!-- Secondary WhatsApp Button -->
