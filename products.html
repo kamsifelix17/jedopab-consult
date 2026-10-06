@@ -1,403 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Jedopab Consult Limited</title>
+    <title>Jedopab Consult Limited | Strategic Insight, Sustainable Impact</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" /><script type="module" src="http://[::1]:5173/resources/js/app.js"></script></head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { 'brand-navy': '#0A1F44', 'brand-gold': '#D4AF37', 'brand-deep': '#05122b', 'brand-light': '#f4f7f6' } } }
+        }
+    </script>
+</head>
 <body class="font-sans antialiased text-gray-800 bg-white selection:bg-brand-gold selection:text-brand-navy">
 
-    <!-- FLOATING LARBEC-STYLE NAVBAR -->
+    <!-- FLOATING NAVBAR -->
     <div class="fixed top-0 w-full z-50 pt-4 px-4 transition-all duration-300">
         <header class="max-w-6xl mx-auto bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-gray-100 px-6 py-3">
             <div class="flex justify-between items-center h-12">
-                <!-- Logo -->
                 <div class="flex-shrink-0 transition-transform hover:scale-105 duration-300">
-                    <a href="http://127.0.0.1:8000/">
-                        <img src="images/logo.png" alt="Jedopab Consult" class="h-10 md:h-12 w-auto">
-                    </a>
+                    <a href="index.html"><img src="images/logo.png" alt="Jedopab Consult" class="h-10 md:h-12 w-auto" onerror="this.outerHTML='<span class=\'font-extrabold text-2xl tracking-wider text-brand-navy\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT</span></span>'"></a>
                 </div>
-                
-                <!-- Desktop Navigation with Active States -->
                 <nav class="hidden md:flex space-x-8 font-bold text-sm items-center">
-                    <a href="http://127.0.0.1:8000/" class="text-gray-500 hover:text-brand-navy transition duration-300">Home</a>
-                    <a href="http://127.0.0.1:8000/about" class="text-gray-500 hover:text-brand-navy transition duration-300">About Us</a>
-                    <a href="http://127.0.0.1:8000/services" class="text-gray-500 hover:text-brand-navy transition duration-300">Services</a>
-                    <a href="products.html" class="text-brand-navy border-b-2 border-brand-gold pb-1 transition duration-300">Products</a>
-                    <a href="http://127.0.0.1:8000/contact" class="text-gray-500 hover:text-brand-navy transition duration-300">Contact Us</a>
+                    <a href="index.html" class="text-brand-navy border-b-2 border-brand-gold pb-1 transition">Home</a>
+                    <a href="about.html" class="text-gray-500 hover:text-brand-navy transition">About Us</a>
+                    <a href="services.html" class="text-gray-500 hover:text-brand-navy transition">Services</a>
+                    <a href="products.html" class="text-gray-500 hover:text-brand-navy transition">Products</a>
+                    <a href="contact.html" class="text-gray-500 hover:text-brand-navy transition">Contact Us</a>
                 </nav>
-
-                <!-- Desktop CTA Button -->
                 <div class="hidden md:block">
-                    <a href="http://127.0.0.1:8000/contact" class="bg-brand-gold text-brand-navy px-6 py-2.5 rounded-full font-bold hover:bg-yellow-500 transition duration-300 shadow-md text-sm">
-                        Get in Touch
-                    </a>
+                    <a href="contact.html" class="bg-brand-gold text-brand-navy px-6 py-2.5 rounded-full font-bold hover:bg-yellow-500 transition shadow-md text-sm">Get in Touch</a>
                 </div>
-
-                <!-- Mobile Menu Hamburger -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobileMenuBtn" class="text-brand-navy hover:text-brand-gold focus:outline-none">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
+                    <button id="mobileMenuBtn" class="text-brand-navy focus:outline-none"><i id="menuIcon" class="bi bi-list text-3xl"></i></button>
                 </div>
             </div>
         </header>
-
-        <!-- Mobile Navigation Dropdown with Active Focus Blocks -->
         <div id="mobileMenu" class="hidden md:hidden max-w-6xl mx-auto mt-2 bg-brand-navy rounded-3xl shadow-2xl overflow-hidden border border-white/10">
             <div class="px-4 py-6 space-y-2">
-                <a href="http://127.0.0.1:8000/" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">Home</a>
-                <a href="http://127.0.0.1:8000/about" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">About Us</a>
-                <a href="http://127.0.0.1:8000/services" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">Services</a>
-                <a href="products.html" class="block px-4 py-3 rounded-xl font-medium transition bg-brand-deep text-brand-gold border border-brand-gold/30">Products</a>
-                <a href="http://127.0.0.1:8000/contact" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">Contact Us</a>
+                <a href="index.html" class="block px-4 py-3 rounded-xl font-medium transition bg-brand-deep text-brand-gold border border-brand-gold/30">Home</a>
+                <a href="about.html" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">About Us</a>
+                <a href="services.html" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">Services</a>
+                <a href="products.html" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">Products</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">Contact Us</a>
             </div>
         </div>
     </div>
 
-    <!-- MAIN PAGE CONTENT -->
     <main class="min-h-screen">
-        
-<!-- 1. HERO SECTION (LARBEC-style Image Background) -->
-<section class="relative bg-brand-navy pt-32 pb-40 border-b-4 border-brand-gold overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Products Library" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30">
-    
-    <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">Our Products & Materials</h1>
-        <p class="text-xl text-gray-300 max-w-2xl mx-auto font-light">
-            Explore our premium training materials, strategic templates, and operational resources.
-        </p>
-    </div>
-</section>
-
-<!-- 2. DYNAMIC PRODUCT GRID -->
-<section class="py-24 bg-slate-50 min-h-[500px]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                                <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col group">
-                    
-                    <div class="relative h-56 overflow-hidden bg-gray-100">
-                                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Resource Placeholder" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
-                                                <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition duration-300"></div>
-                    </div>
-
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-xl font-extrabold text-brand-navy mb-3 line-clamp-2 leading-tight">Corporate Leadership Training Manual</h3>
-                        <p class="text-gray-500 text-sm mb-8 flex-grow line-clamp-3 leading-relaxed">
-                            A comprehensive guide for developing executive leadership skills, conflict resolution, and team management within corporate organizations.
-                        </p>
-                        
-                        <div class="mt-auto">
-                            <button 
-                                onclick="openCheckoutModal('Corporate Leadership Training Manual')" 
-                                class="w-full bg-brand-navy text-brand-gold px-6 py-4 rounded-full font-bold hover:bg-brand-deep hover:text-white transition duration-300 shadow-md flex justify-center items-center">
-                                Inquire / Purchase
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                                <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col group">
-                    
-                    <div class="relative h-56 overflow-hidden bg-gray-100">
-                                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Resource Placeholder" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
-                                                <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition duration-300"></div>
-                    </div>
-
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-xl font-extrabold text-brand-navy mb-3 line-clamp-2 leading-tight">Strategic HR Planning Template</h3>
-                        <p class="text-gray-500 text-sm mb-8 flex-grow line-clamp-3 leading-relaxed">
-                            Customizable templates and frameworks for aligning human resource strategies with long-term business objectives.
-                        </p>
-                        
-                        <div class="mt-auto">
-                            <button 
-                                onclick="openCheckoutModal('Strategic HR Planning Template')" 
-                                class="w-full bg-brand-navy text-brand-gold px-6 py-4 rounded-full font-bold hover:bg-brand-deep hover:text-white transition duration-300 shadow-md flex justify-center items-center">
-                                Inquire / Purchase
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                                <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col group">
-                    
-                    <div class="relative h-56 overflow-hidden bg-gray-100">
-                                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Resource Placeholder" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
-                                                <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition duration-300"></div>
-                    </div>
-
-                    <div class="p-8 flex flex-col flex-grow">
-                        <h3 class="text-xl font-extrabold text-brand-navy mb-3 line-clamp-2 leading-tight">Operational Efficiency Audit Framework</h3>
-                        <p class="text-gray-500 text-sm mb-8 flex-grow line-clamp-3 leading-relaxed">
-                            Standard operating procedures and analytical tools for auditing and improving project execution and supply chain delivery.
-                        </p>
-                        
-                        <div class="mt-auto">
-                            <button 
-                                onclick="openCheckoutModal('Operational Efficiency Audit Framework')" 
-                                class="w-full bg-brand-navy text-brand-gold px-6 py-4 rounded-full font-bold hover:bg-brand-deep hover:text-white transition duration-300 shadow-md flex justify-center items-center">
-                                Inquire / Purchase
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                            </div>
+        <section class="relative bg-brand-navy pt-32 pb-40 border-b-4 border-brand-gold overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Products" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30">
+            <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">Our Products & Materials</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto font-light">Explore our premium training materials, strategic templates, and operational resources.</p>
             </div>
-</section>
+        </section>
 
-<!-- 3. CHECKOUT MODAL (Responsive Scroll Fix) -->
-<div id="checkoutModal" class="fixed inset-0 z-50 hidden bg-brand-navy/90 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
-    <!-- Added max-h-[90vh] and overflow-y-auto to allow internal scrolling on mobile -->
-    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300 relative" id="modalContent">
-        
-        <!-- Close Button -->
-        <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-gray-500 hover:text-brand-navy transition z-20 bg-gray-100 hover:bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center">
-            <i class="bi bi-x-lg"></i>
-        </button>
-
-        <div class="flex flex-col md:flex-row h-full">
-            <!-- Left: Bank Details -->
-            <div class="md:w-5/12 bg-slate-50 p-8 md:p-12 border-b md:border-b-0 md:border-r border-gray-100 flex flex-col justify-center">
-                <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-brand-navy mb-6 shadow-sm text-2xl">
-                    <i class="bi bi-bank2"></i>
-                </div>
-                <h4 class="font-extrabold text-brand-navy mb-4 text-2xl">Bank Transfer</h4>
-                <p class="text-sm text-gray-500 mb-8 leading-relaxed font-medium">Make your payment to the corporate account below. Once transferred, upload the receipt to finalize your request.</p>
+        <section class="py-24 bg-slate-50 min-h-[500px]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="space-y-6 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <div>
-                        <p class="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Bank Name</p>
-                        <p class="font-bold text-gray-800 text-lg">[Insert Bank Name]</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Product 1 -->
+                    <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col group">
+                        <div class="relative h-56 overflow-hidden bg-gray-100">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
+                            <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-xl font-extrabold text-brand-navy mb-3 line-clamp-2 leading-tight">Corporate Leadership Manual</h3>
+                            <p class="text-gray-500 text-sm mb-8 flex-grow">A comprehensive guide for developing organizational leaders.</p>
+                            <button onclick="openCheckoutModal('Corporate Leadership Manual')" class="w-full bg-brand-navy text-brand-gold px-6 py-4 rounded-full font-bold hover:bg-brand-deep hover:text-white transition shadow-md">Inquire / Purchase</button>
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Account Name</p>
-                        <p class="font-bold text-gray-800 text-lg">Jedopab Consult Limited</p>
-                    </div>
-                    <div>
-                        <p class="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Account Number</p>
-                        <p class="font-extrabold text-brand-deep text-2xl tracking-widest">[0000000000]</p>
+                    
+                    <!-- Product 2 -->
+                    <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col group">
+                        <div class="relative h-56 overflow-hidden bg-gray-100">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
+                            <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-xl font-extrabold text-brand-navy mb-3 line-clamp-2 leading-tight">Strategic Planning Template</h3>
+                            <p class="text-gray-500 text-sm mb-8 flex-grow">Ready-to-use frameworks for annual corporate planning.</p>
+                            <button onclick="openCheckoutModal('Strategic Planning Template')" class="w-full bg-brand-navy text-brand-gold px-6 py-4 rounded-full font-bold hover:bg-brand-deep hover:text-white transition shadow-md">Inquire / Purchase</button>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Right: Form -->
-            <div class="md:w-7/12 p-10 md:p-12 flex flex-col justify-center">
-                <h4 class="font-extrabold text-brand-navy mb-6 text-2xl">Confirm Payment</h4>
-                <form action="http://127.0.0.1:8000/contact/submit" method="POST" enctype="multipart/form-data" class="space-y-5">
-                    <input type="hidden" name="_token" value="lSp76qZZjoBYCpKk8v5WQsUPpD8NObKCDl3B0KIG" autocomplete="off">                    <input type="hidden" name="product_name" id="modalProductNameInput">
-                    
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">Selected Product</label>
-                        <input type="text" id="modalProductNameDisplay" readonly class="w-full bg-slate-100 border-transparent rounded-2xl px-5 py-4 text-sm text-gray-600 focus:outline-none cursor-not-allowed font-medium">
-                    </div>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
-                            <input type="text" name="name" required class="w-full bg-slate-50 border-transparent rounded-2xl px-5 py-4 text-sm focus:bg-white focus:ring-2 focus:ring-brand-navy transition shadow-sm outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
-                            <input type="email" name="email" required class="w-full bg-slate-50 border-transparent rounded-2xl px-5 py-4 text-sm focus:bg-white focus:ring-2 focus:ring-brand-navy transition shadow-sm outline-none">
+        <!-- CHECKOUT MODAL (Responsive Scroll Fix Applied) -->
+        <div id="checkoutModal" class="fixed inset-0 z-[100] hidden bg-brand-navy/90 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+            <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300 relative" id="modalContent">
+                <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-gray-500 hover:text-brand-navy bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center z-20"><i class="bi bi-x-lg"></i></button>
+
+                <div class="flex flex-col md:flex-row h-full">
+                    <div class="md:w-5/12 bg-slate-50 p-8 md:p-12 border-b md:border-b-0 md:border-r border-gray-100">
+                        <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-brand-navy mb-6 shadow-sm text-2xl"><i class="bi bi-bank2"></i></div>
+                        <h4 class="font-extrabold text-brand-navy mb-4 text-2xl">Bank Transfer</h4>
+                        <p class="text-sm text-gray-500 mb-8 font-medium">Make your payment to the corporate account below. Once transferred, upload the receipt to finalize your request.</p>
+                        <div class="space-y-6 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <div><p class="text-gray-400 text-xs font-bold uppercase mb-1">Bank Name</p><p class="font-bold text-gray-800 text-lg">[Insert Bank Name]</p></div>
+                            <div><p class="text-gray-400 text-xs font-bold uppercase mb-1">Account Name</p><p class="font-bold text-gray-800 text-lg">Jedopab Consult Limited</p></div>
+                            <div><p class="text-gray-400 text-xs font-bold uppercase mb-1">Account Number</p><p class="font-extrabold text-brand-deep text-2xl tracking-widest">[0000000000]</p></div>
                         </div>
                     </div>
-
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-2">Upload Receipt</label>
-                        <input type="file" name="receipt" required accept="image/*,.pdf" class="w-full bg-slate-50 rounded-2xl border-transparent p-2 text-sm text-gray-500 file:mr-4 file:py-3 file:px-6 file:rounded-xl file:border-0 file:text-sm file:font-bold file:bg-brand-navy file:text-brand-gold hover:file:bg-brand-deep transition shadow-sm">
+                    <div class="md:w-7/12 p-8 md:p-12">
+                        <h4 class="font-extrabold text-brand-navy mb-6 text-2xl">Confirm Payment</h4>
+                        
+                        <!-- FORMSPREE ACTION: Replace 'YOUR_FORMSPREE_ID' with your actual free Formspree ID -->
+                        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" enctype="multipart/form-data" class="space-y-5">
+                            <input type="hidden" name="product_name" id="modalProductNameInput">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Selected Product</label>
+                                <input type="text" id="modalProductNameDisplay" readonly class="w-full bg-slate-100 border-transparent rounded-2xl px-5 py-4 text-sm text-gray-600 focus:outline-none cursor-not-allowed font-medium">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
+                                    <input type="text" name="name" required class="w-full bg-slate-50 rounded-2xl px-5 py-4 text-sm focus:ring-2 focus:ring-brand-navy outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
+                                    <input type="email" name="email" required class="w-full bg-slate-50 rounded-2xl px-5 py-4 text-sm focus:ring-2 focus:ring-brand-navy outline-none">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Upload Receipt</label>
+                                <input type="file" name="receipt" required accept="image/*,.pdf" class="w-full bg-slate-50 rounded-2xl p-2 text-sm text-gray-500 file:mr-4 file:py-3 file:px-6 file:rounded-xl file:border-0 file:bg-brand-navy file:text-brand-gold">
+                            </div>
+                            <button type="submit" class="w-full bg-brand-gold text-brand-navy font-extrabold rounded-full py-4 mt-4 hover:bg-yellow-500 transition shadow-[0_8px_20px_rgb(212,175,55,0.3)]">Submit Confirmation</button>
+                        </form>
                     </div>
-                    
-                    <button type="submit" class="w-full bg-brand-gold text-brand-navy font-extrabold rounded-full py-4 mt-4 hover:bg-yellow-500 transition shadow-[0_8px_20px_rgb(212,175,55,0.3)]">
-                        Submit Confirmation
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<script>
-    const modal = document.getElementById('checkoutModal');
-    const modalContent = document.getElementById('modalContent');
-    const productNameInput = document.getElementById('modalProductNameInput');
-    const productNameDisplay = document.getElementById('modalProductNameDisplay');
+        <script>
+            const modal = document.getElementById('checkoutModal');
+            const modalContent = document.getElementById('modalContent');
+            const productNameInput = document.getElementById('modalProductNameInput');
+            const productNameDisplay = document.getElementById('modalProductNameDisplay');
 
-    function openCheckoutModal(productName) {
-        productNameDisplay.value = productName;
-        productNameInput.value = productName;
-        
-        modal.classList.remove('hidden');
-        setTimeout(() => {
-            modal.classList.remove('opacity-0');
-            modalContent.classList.remove('scale-95');
-        }, 10);
-    }
-
-    function closeCheckoutModal() {
-        modal.classList.add('opacity-0');
-        modalContent.classList.add('scale-95');
-        setTimeout(() => {
-            modal.classList.add('hidden');
-        }, 300);
-    }
-
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            closeCheckoutModal();
-        }
-    });
-</script>
+            function openCheckoutModal(productName) {
+                productNameDisplay.value = productName;
+                productNameInput.value = productName;
+                modal.classList.remove('hidden');
+                setTimeout(() => { modal.classList.remove('opacity-0'); modalContent.classList.remove('scale-95'); }, 10);
+            }
+            function closeCheckoutModal() {
+                modal.classList.add('opacity-0'); modalContent.classList.add('scale-95');
+                setTimeout(() => { modal.classList.add('hidden'); }, 300);
+            }
+        </script>
     </main>
 
-    <!-- LARBEC-STYLE FOOTER -->
-<footer class="bg-brand-navy text-gray-300 pt-20 pb-8 border-t-[6px] border-brand-gold">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            
-            <!-- Column 1: Brand & Socials -->
-            <div class="lg:pr-8">
-                <a href="http://127.0.0.1:8000/" class="inline-block mb-6 transition-transform hover:scale-105 duration-300">
-                    <img src="images/logo-footer.png" alt="Jedopab Consult" class="h-12 w-auto">
-                </a>
-                <p class="text-sm text-gray-400 leading-relaxed mb-8">
-                    Reliable capability development, strategic consulting, infrastructure, and supply chain solutions across Nigeria.
-                </p>
-                <!-- Bootstrap Social Icons -->
-                <div class="flex space-x-3">
-                    <a href="products.html#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10 text-lg">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                    <a href="products.html#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10 text-lg">
-                        <i class="bi bi-twitter-x"></i>
-                    </a>
-                    <a href="products.html#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10 text-lg">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                    <a href="products.html#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition shadow-sm border border-white/10 text-lg">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
+    <!-- FOOTER -->
+    <footer class="bg-brand-navy text-gray-300 pt-20 pb-8 border-t-[6px] border-brand-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:pr-8">
+                    <a href="index.html" class="inline-block mb-6 transition-transform hover:scale-105 duration-300"><img src="images/logo-footer.png" alt="Jedopab Consult" class="h-12 w-auto" onerror="this.outerHTML='<span class=\'text-white text-2xl font-extrabold\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT</span></span>'"></a>
+                    <p class="text-sm text-gray-400 mb-8">Reliable capability development, strategic consulting, infrastructure, and supply chain solutions across Nigeria.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition text-lg"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition text-lg"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition text-lg"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition text-lg"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm font-medium">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-gold transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-brand-gold transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-gold transition">Services</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-brand-gold transition">Products</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm font-medium">
+                        <li><a href="services.html#training" class="text-gray-400 hover:text-brand-gold transition">Training & Capacity</a></li>
+                        <li><a href="services.html#consultancy" class="text-gray-400 hover:text-brand-gold transition">Consultancy</a></li>
+                        <li><a href="services.html#project-management" class="text-gray-400 hover:text-brand-gold transition">Project Management</a></li>
+                        <li><a href="services.html#logistics" class="text-gray-400 hover:text-brand-gold transition">Supply & Logistics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-6">Get in Touch</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start"><i class="bi bi-envelope-fill text-brand-gold mr-3 text-lg"></i><span class="text-gray-400">jedopabconsult@gmail.com</span></li>
+                        <li class="flex items-start"><i class="bi bi-telephone-fill text-brand-gold mr-3 text-lg"></i><span class="text-gray-400">0806 655 5802<br>0803 517 5743</span></li>
+                        <li class="flex items-start"><i class="bi bi-geo-alt-fill text-brand-gold mr-3 text-lg"></i><span class="text-gray-400">5, Twin Obasa Street,<br>Gbagada, Lagos.</span></li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Column 2: Company -->
-            <div>
-                <h4 class="text-white text-lg font-bold mb-6">Company</h4>
-                <ul class="space-y-3 text-sm font-medium">
-                    <li><a href="http://127.0.0.1:8000/" class="text-gray-400 hover:text-brand-gold transition">Home</a></li>
-                    <li><a href="http://127.0.0.1:8000/about" class="text-gray-400 hover:text-brand-gold transition">About Us</a></li>
-                    <li><a href="http://127.0.0.1:8000/services" class="text-gray-400 hover:text-brand-gold transition">Services</a></li>
-                    <li><a href="products.html" class="text-gray-400 hover:text-brand-gold transition">Products</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 3: Services -->
-            <div>
-                <h4 class="text-white text-lg font-bold mb-6">Services</h4>
-                <ul class="space-y-3 text-sm font-medium">
-                    <li><a href="http://127.0.0.1:8000/services#training" class="text-gray-400 hover:text-brand-gold transition">Training & Capacity</a></li>
-                    <li><a href="http://127.0.0.1:8000/services#consultancy" class="text-gray-400 hover:text-brand-gold transition">Consultancy</a></li>
-                    <li><a href="http://127.0.0.1:8000/services#project-management" class="text-gray-400 hover:text-brand-gold transition">Project Management</a></li>
-                    <li><a href="http://127.0.0.1:8000/services#logistics" class="text-gray-400 hover:text-brand-gold transition">Supply & Logistics</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Contact -->
-            <div>
-                <h4 class="text-white text-lg font-bold mb-6">Get in Touch</h4>
-                <ul class="space-y-4 text-sm">
-                    <li class="flex items-start">
-                        <i class="bi bi-envelope-fill text-brand-gold mr-3 text-lg"></i>
-                        <span class="text-gray-400">jedopabconsult@gmail.com</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="bi bi-telephone-fill text-brand-gold mr-3 text-lg"></i>
-                        <span class="text-gray-400">0806 655 5802<br>0803 517 5743</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="bi bi-geo-alt-fill text-brand-gold mr-3 text-lg"></i>
-                        <span class="text-gray-400">5, Twin Obasa Street,<br>Gbagada, Lagos.</span>
-                    </li>
-                </ul>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col justify-center items-center text-center space-y-6">
+                <div class="text-xs text-gray-500 font-medium w-full flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">&copy; 2026 Jedopab Consult Limited. All rights reserved.</div>
+                    <div class="flex space-x-6"><a href="#" class="hover:text-white transition">Privacy Policy</a><a href="#" class="hover:text-white transition">Terms of Service</a></div>
+                </div>
+                <div class="pt-4 flex flex-col items-center justify-center w-full">
+                    <div class="flex items-center justify-center gap-3 mb-2">
+                        <span class="w-8 h-px bg-slate-700"></span><span class="text-[10px] uppercase tracking-widest text-slate-500">Crafted with precision</span><span class="w-8 h-px bg-slate-700"></span>
+                    </div>
+                    <p class="text-xs text-slate-500 tracking-wide">Website by <a href="#" target="_blank" class="font-serif text-slate-300 tracking-normal ml-1 hover:text-brand-gold transition">ImpactDev</a></p>
+                </div>
             </div>
         </div>
-        
-        <!-- Bottom Copyright & ImpactDev Signature -->
-        <div class="border-t border-white/10 pt-8 flex flex-col justify-center items-center text-center space-y-6">
-            
-            <div class="text-xs text-gray-500 font-medium w-full flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <a href="http://127.0.0.1:8000/login" class="hover:text-white transition cursor-default">&copy;</a> 2026 Jedopab Consult Limited. All rights reserved.
-                </div>
-                <div class="flex space-x-6">
-                    <a href="products.html#" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="products.html#" class="hover:text-white transition">Terms of Service</a>
-                </div>
-            </div>
+    </footer>
 
-            <!-- ImpactDev Signature -->
-            <div class="pt-4 flex flex-col items-center justify-center w-full">
-                <!-- Signature Divider -->
-                <div class="flex items-center justify-center gap-3 mb-2">
-                    <span class="w-8 h-px bg-slate-700"></span>
-                    <span class="text-[10px] uppercase tracking-widest text-slate-500">
-                        Crafted with precision
-                    </span>
-                    <span class="w-8 h-px bg-slate-700"></span>
-                </div>
-
-                <!-- Replace '#' with your actual ImpactDev URL once ready -->
-                <p class="text-xs text-slate-500 tracking-wide">
-                    Website by
-                    <a href="https://theimpactdev.com" target="_blank" class="font-serif text-slate-300 tracking-normal ml-1 hover:text-brand-gold transition duration-300">
-                        ImpactDev
-                    </a>
-                </p>
-            </div>
-
-        </div>
-    </div>
-</footer>
-
-    <!-- Master Frontend JavaScript -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        
-        // 1. Mobile Menu Toggle Logic
-        const btn = document.getElementById('mobileMenuBtn');
-        const menu = document.getElementById('mobileMenu');
-        const icon = document.getElementById('menuIcon');
-        
-        if(btn) {
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                if (menu.classList.contains('hidden')) {
-                    icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-                } else {
-                    icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-                }
-            });
-        }
-
-        // 2. Auto-Dismiss Success Alert Logic
-        const alertBox = document.getElementById('auto-dismiss-alert');
-        if (alertBox) {
-            setTimeout(() => {
-                // Trigger the fade out
-                alertBox.classList.add('opacity-0');
-                
-                // Wait for the CSS transition to finish, then remove from layout
-                setTimeout(() => {
-                    alertBox.style.display = 'none';
-                }, 500); 
-            }, 4000); // 4000ms = 4 seconds before dismissing
-        }
-        
-    });
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            if(btn) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    icon.className = menu.classList.contains('hidden') ? 'bi bi-list text-3xl' : 'bi bi-x text-3xl';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
