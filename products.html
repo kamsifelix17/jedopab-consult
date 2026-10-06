@@ -19,14 +19,15 @@
     <div class="fixed top-0 w-full z-50 pt-4 px-4 transition-all duration-300">
         <header class="max-w-6xl mx-auto bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-gray-100 px-6 py-3">
             <div class="flex justify-between items-center h-12">
+                <!-- Logo scaled down to allow company name to stand out -->
                 <div class="flex-shrink-0 transition-transform hover:scale-105 duration-300">
-                    <a href="index.html"><img src="images/logo.png" alt="Jedopab Consult" class="h-10 md:h-12 w-auto" onerror="this.outerHTML='<span class=\'font-extrabold text-2xl tracking-wider text-brand-navy\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT</span></span>'"></a>
+                    <a href="index.html"><img src="images/logo.png" alt="Jedopab Consult Limited" class="h-8 md:h-10 w-auto" onerror="this.outerHTML='<span class=\'font-extrabold text-xl tracking-wider text-brand-navy\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT LIMITED</span></span>'"></a>
                 </div>
                 <nav class="hidden md:flex space-x-8 font-bold text-sm items-center">
-                    <a href="index.html" class="text-brand-navy border-b-2 border-brand-gold pb-1 transition">Home</a>
+                    <a href="index.html" class="text-gray-500 hover:text-brand-navy transition">Home</a>
                     <a href="about.html" class="text-gray-500 hover:text-brand-navy transition">About Us</a>
                     <a href="services.html" class="text-gray-500 hover:text-brand-navy transition">Services</a>
-                    <a href="products.html" class="text-gray-500 hover:text-brand-navy transition">Products</a>
+                    <a href="products.html" class="text-brand-navy border-b-2 border-brand-gold pb-1 transition">Products</a>
                     <a href="contact.html" class="text-gray-500 hover:text-brand-navy transition">Contact Us</a>
                 </nav>
                 <div class="hidden md:block">
@@ -39,10 +40,10 @@
         </header>
         <div id="mobileMenu" class="hidden md:hidden max-w-6xl mx-auto mt-2 bg-brand-navy rounded-3xl shadow-2xl overflow-hidden border border-white/10">
             <div class="px-4 py-6 space-y-2">
-                <a href="index.html" class="block px-4 py-3 rounded-xl font-medium transition bg-brand-deep text-brand-gold border border-brand-gold/30">Home</a>
+                <a href="index.html" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">Home</a>
                 <a href="about.html" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">About Us</a>
                 <a href="services.html" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">Services</a>
-                <a href="products.html" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">Products</a>
+                <a href="products.html" class="block px-4 py-3 rounded-xl font-medium transition bg-brand-deep text-brand-gold border border-brand-gold/30">Products</a>
                 <a href="contact.html" class="block px-4 py-3 rounded-xl font-medium transition text-white hover:bg-brand-deep">Contact Us</a>
             </div>
         </div>
@@ -52,8 +53,8 @@
         <section class="relative bg-brand-navy pt-32 pb-40 border-b-4 border-brand-gold overflow-hidden">
             <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Products" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30">
             <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">Our Products & Materials</h1>
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto font-light">Explore our premium training materials, strategic templates, and operational resources.</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">Our Products & Events</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto font-light">Explore our premium training materials, strategic templates, and upcoming programs.</p>
             </div>
         </section>
 
@@ -86,11 +87,25 @@
                             <button onclick="openCheckoutModal('Strategic Planning Template')" class="w-full bg-brand-navy text-brand-gold px-6 py-4 rounded-full font-bold hover:bg-brand-deep hover:text-white transition shadow-md">Inquire / Purchase</button>
                         </div>
                     </div>
+
+                    <!-- New Added Feature: Training Programs -->
+                    <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col group">
+                        <div class="relative h-56 overflow-hidden bg-gray-100">
+                            <img src="https://images.unsplash.com/photo-1558403194-611308249627?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
+                            <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-xl font-extrabold text-brand-navy mb-3 line-clamp-2 leading-tight">Professional Training Programs & Events</h3>
+                            <p class="text-gray-500 text-sm mb-8 flex-grow">Register for our upcoming capability-building programs and corporate events.</p>
+                            <button onclick="openCheckoutModal('Professional Training Programs')" class="w-full bg-brand-navy text-brand-gold px-6 py-4 rounded-full font-bold hover:bg-brand-deep hover:text-white transition shadow-md">Register Interest</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- CHECKOUT MODAL (Responsive Scroll Fix Applied) -->
+        <!-- CHECKOUT MODAL -->
         <div id="checkoutModal" class="fixed inset-0 z-[100] hidden bg-brand-navy/90 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
             <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300 relative" id="modalContent">
                 <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-gray-500 hover:text-brand-navy bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center z-20"><i class="bi bi-x-lg"></i></button>
@@ -102,18 +117,17 @@
                         <p class="text-sm text-gray-500 mb-8 font-medium">Make your payment to the corporate account below. Once transferred, upload the receipt to finalize your request.</p>
                         <div class="space-y-6 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                             <div><p class="text-gray-400 text-xs font-bold uppercase mb-1">Bank Name</p><p class="font-bold text-gray-800 text-lg">[Insert Bank Name]</p></div>
-                            <div><p class="text-gray-400 text-xs font-bold uppercase mb-1">Account Name</p><p class="font-bold text-gray-800 text-lg">Jedopab Consult Limited</p></div>
+                            <div><p class="text-gray-400 text-xs font-bold uppercase mb-1">Account Name</p><p class="font-bold text-gray-800 text-lg">JEDOPAB CONSULT LIMITED</p></div>
                             <div><p class="text-gray-400 text-xs font-bold uppercase mb-1">Account Number</p><p class="font-extrabold text-brand-deep text-2xl tracking-widest">[0000000000]</p></div>
                         </div>
                     </div>
                     <div class="md:w-7/12 p-8 md:p-12">
                         <h4 class="font-extrabold text-brand-navy mb-6 text-2xl">Confirm Payment</h4>
                         
-                        <!-- FORMSPREE ACTION: Replace 'YOUR_FORMSPREE_ID' with your actual free Formspree ID -->
                         <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" enctype="multipart/form-data" class="space-y-5">
                             <input type="hidden" name="product_name" id="modalProductNameInput">
                             <div>
-                                <label class="block text-sm font-bold text-gray-700 mb-2">Selected Product</label>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Selected Product/Event</label>
                                 <input type="text" id="modalProductNameDisplay" readonly class="w-full bg-slate-100 border-transparent rounded-2xl px-5 py-4 text-sm text-gray-600 focus:outline-none cursor-not-allowed font-medium">
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -156,13 +170,13 @@
         </script>
     </main>
 
-    <!-- FOOTER -->
+<!-- FOOTER -->
     <footer class="bg-brand-navy text-gray-300 pt-20 pb-8 border-t-[6px] border-brand-gold">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div class="lg:pr-8">
-                    <a href="index.html" class="inline-block mb-6 transition-transform hover:scale-105 duration-300"><img src="images/logo-footer.png" alt="Jedopab Consult" class="h-12 w-auto" onerror="this.outerHTML='<span class=\'text-white text-2xl font-extrabold\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT</span></span>'"></a>
-                    <p class="text-sm text-gray-400 mb-8">Reliable capability development, strategic consulting, infrastructure, and supply chain solutions across Nigeria.</p>
+                    <a href="index.html" class="inline-block mb-6 transition-transform hover:scale-105 duration-300"><img src="images/logo-footer.png" alt="Jedopab Consult Limited" class="h-12 w-auto" onerror="this.outerHTML='<span class=\'text-white text-2xl font-extrabold\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT LIMITED</span></span>'"></a>
+                    <p class="text-sm text-gray-400 mb-8">Reliable capability development, strategic consulting, project management and supply chain solutions across Nigeria and beyond.</p>
                     <div class="flex space-x-3">
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition text-lg"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition text-lg"><i class="bi bi-twitter-x"></i></a>
@@ -201,13 +215,13 @@
             <div class="border-t border-white/10 pt-8 flex flex-col justify-center items-center text-center space-y-6">
                 <div class="text-xs text-gray-500 font-medium w-full flex flex-col md:flex-row justify-between items-center">
                     <div class="mb-4 md:mb-0">&copy; 2026 Jedopab Consult Limited. All rights reserved.</div>
-                    <div class="flex space-x-6"><a href="#" class="hover:text-white transition">Privacy Policy</a><a href="#" class="hover:text-white transition">Terms of Service</a></div>
+                    <div class="flex space-x-6"><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a><a href="terms.html" class="hover:text-white transition">Terms of Service</a></div>
                 </div>
                 <div class="pt-4 flex flex-col items-center justify-center w-full">
                     <div class="flex items-center justify-center gap-3 mb-2">
                         <span class="w-8 h-px bg-slate-700"></span><span class="text-[10px] uppercase tracking-widest text-slate-500">Crafted with precision</span><span class="w-8 h-px bg-slate-700"></span>
                     </div>
-                    <p class="text-xs text-slate-500 tracking-wide">Website by <a href="#" target="_blank" class="font-serif text-slate-300 tracking-normal ml-1 hover:text-brand-gold transition">ImpactDev</a></p>
+                    <p class="text-xs text-slate-500 tracking-wide">Website by <a href="https://www.theimpactdev.com" target="_blank" class="font-serif text-slate-300 tracking-normal ml-1 hover:text-brand-gold transition">ImpactDev</a></p>
                 </div>
             </div>
         </div>
