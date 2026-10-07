@@ -19,9 +19,22 @@
     <div class="fixed top-0 w-full z-50 pt-4 px-4 transition-all duration-300">
         <header class="max-w-6xl mx-auto bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-gray-100 px-6 py-3">
             <div class="flex justify-between items-center h-12">
-                <!-- Logo scaled down to allow company name to stand out -->
-                <div class="flex-shrink-0 transition-transform hover:scale-105 duration-300">
-                    <a href="index.html"><img src="images/logo.png" alt="Jedopab Consult Limited" class="h-8 md:h-10 w-auto" onerror="this.outerHTML='<span class=\'font-extrabold text-xl tracking-wider text-brand-navy\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT LIMITED</span></span>'"></a>
+                <!-- Logo (Icon + HTML Typography) -->
+                <div class="flex-shrink-0 z-20">
+                    <a href="index.html" class="flex items-center gap-2 sm:gap-3 group">
+                        <!-- The Canva Icon Only -->
+                        <img src="images/logo.png" alt="Jedopab Icon" class="h-8 md:h-11 w-auto transition-transform group-hover:scale-105 duration-300">
+        
+                        <!-- The HTML Typography -->
+                        <div class="flex flex-col justify-center mt-1">
+                            <span class="font-extrabold text-lg md:text-2xl tracking-widest text-brand-navy leading-none mb-1">
+                                JEDOPAB
+                            </span>
+                            <span class="font-bold text-[9px] md:text-[11px] tracking-[0.15em] text-brand-gold uppercase leading-none">
+                                Consult Limited
+                            </span>
+                        </div>
+                    </a>
                 </div>
                 <nav class="hidden md:flex space-x-8 font-bold text-sm items-center">
                     <a href="index.html" class="text-gray-500 hover:text-brand-navy transition">Home</a>
@@ -64,7 +77,7 @@
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-0 lg:relative">
                     <div class="w-full lg:w-3/5 lg:relative z-10">
                         <div class="rounded-3xl overflow-hidden shadow-2xl relative">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="CEO" class="w-full h-[500px] object-cover">
+                            <img src="images/ceo.png" alt="CEO" class="w-full h-[500px] object-cover object-top">
                             <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg border border-white/20">
                                 <p class="font-bold text-brand-navy text-lg">Adedotun Oluwatosin</p>
                                 <p class="text-brand-gold text-sm font-bold">Founder & CEO</p>
@@ -87,6 +100,31 @@
                 </div>
             </div>
         </section>
+        <!-- GALLERY SECTION: Professional Training & Events -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-brand-gold font-bold tracking-widest uppercase text-sm mb-2 block">Our Impact in Action</span>
+            <h2 class="text-4xl font-extrabold text-brand-navy mb-4">Professional Training & Events</h2>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto">Moments from our capability-building programs, corporate events, and client engagements.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <img src="images/gallery-13.jpg" alt="Team Training" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <img src="images/gallery-3.jpg" alt="Corporate Event" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <img src="images/gallery-11.jpg" alt="Awards" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <img src="images/gallery-4.jpg" alt="Board Meeting" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <img src="images/gallery-5.jpg" alt="Capacity Building" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <img src="images/gallery-6.jpg" alt="Recognition" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            
+            <!-- Optional CTA Card inside the Gallery -->
+            <div class="bg-brand-navy rounded-2xl shadow-md w-full h-64 flex flex-col items-center justify-center p-8 text-center hover:shadow-xl hover:-translate-y-1 transition duration-300 border border-brand-gold/30">
+                <i class="bi bi-calendar-event text-brand-gold text-4xl mb-4"></i>
+                <h4 class="text-white font-bold text-xl mb-2">Join Our Next Event</h4>
+                <a href="products.html" class="text-brand-gold hover:text-white font-medium text-sm transition">View Programs &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section class="py-24 bg-brand-navy text-white relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 relative z-10">
@@ -115,6 +153,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div class="lg:pr-8">
                     <a href="index.html" class="inline-block mb-6 transition-transform hover:scale-105 duration-300"><img src="images/logo-footer.png" alt="Jedopab Consult Limited" class="h-12 w-auto" onerror="this.outerHTML='<span class=\'text-white text-2xl font-extrabold\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT LIMITED</span></span>'"></a>
+                    <h3 class="text-white text-2xl font-extrabold tracking-wider mb-6">JEDOPAB <span class="text-brand-gold block text-sm tracking-[0.15em] mt-1">CONSULT LIMITED</span></h3>
                     <p class="text-sm text-gray-400 mb-8">Reliable capability development, strategic consulting, project management and supply chain solutions across Nigeria and beyond.</p>
                     <div class="flex space-x-3">
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition text-lg"><i class="bi bi-facebook"></i></a>

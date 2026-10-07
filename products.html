@@ -19,9 +19,22 @@
     <div class="fixed top-0 w-full z-50 pt-4 px-4 transition-all duration-300">
         <header class="max-w-6xl mx-auto bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-gray-100 px-6 py-3">
             <div class="flex justify-between items-center h-12">
-                <!-- Logo scaled down to allow company name to stand out -->
-                <div class="flex-shrink-0 transition-transform hover:scale-105 duration-300">
-                    <a href="index.html"><img src="images/logo.png" alt="Jedopab Consult Limited" class="h-8 md:h-10 w-auto" onerror="this.outerHTML='<span class=\'font-extrabold text-xl tracking-wider text-brand-navy\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT LIMITED</span></span>'"></a>
+                <!-- Logo (Icon + HTML Typography) -->
+                <div class="flex-shrink-0 z-20">
+                    <a href="index.html" class="flex items-center gap-2 sm:gap-3 group">
+                        <!-- The Canva Icon Only -->
+                        <img src="images/logo.png" alt="Jedopab Icon" class="h-8 md:h-11 w-auto transition-transform group-hover:scale-105 duration-300">
+                        
+                        <!-- The HTML Typography -->
+                        <div class="flex flex-col justify-center mt-1">
+                            <span class="font-extrabold text-lg md:text-2xl tracking-widest text-brand-navy leading-none mb-1">
+                                JEDOPAB
+                            </span>
+                            <span class="font-bold text-[9px] md:text-[11px] tracking-[0.15em] text-brand-gold uppercase leading-none">
+                                Consult Limited
+                            </span>
+                        </div>
+                    </a>
                 </div>
                 <nav class="hidden md:flex space-x-8 font-bold text-sm items-center">
                     <a href="index.html" class="text-gray-500 hover:text-brand-navy transition">Home</a>
@@ -65,7 +78,7 @@
                     <!-- Product 1 -->
                     <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col group">
                         <div class="relative h-56 overflow-hidden bg-gray-100">
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
+                            <img src="images/gallery-7.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
                             <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition"></div>
                         </div>
                         <div class="p-8 flex flex-col flex-grow">
@@ -78,7 +91,7 @@
                     <!-- Product 2 -->
                     <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col group">
                         <div class="relative h-56 overflow-hidden bg-gray-100">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
+                            <img src="images/gallery-8.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
                             <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition"></div>
                         </div>
                         <div class="p-8 flex flex-col flex-grow">
@@ -91,7 +104,7 @@
                     <!-- New Added Feature: Training Programs -->
                     <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col group">
                         <div class="relative h-56 overflow-hidden bg-gray-100">
-                            <img src="https://images.unsplash.com/photo-1558403194-611308249627?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
+                            <img src="images/gallery-9.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80">
                             <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition"></div>
                         </div>
                         <div class="p-8 flex flex-col flex-grow">
@@ -176,6 +189,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div class="lg:pr-8">
                     <a href="index.html" class="inline-block mb-6 transition-transform hover:scale-105 duration-300"><img src="images/logo-footer.png" alt="Jedopab Consult Limited" class="h-12 w-auto" onerror="this.outerHTML='<span class=\'text-white text-2xl font-extrabold\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT LIMITED</span></span>'"></a>
+                    <h3 class="text-white text-2xl font-extrabold tracking-wider mb-6">JEDOPAB <span class="text-brand-gold block text-sm tracking-[0.15em] mt-1">CONSULT LIMITED</span></h3>
                     <p class="text-sm text-gray-400 mb-8">Reliable capability development, strategic consulting, project management and supply chain solutions across Nigeria and beyond.</p>
                     <div class="flex space-x-3">
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition text-lg"><i class="bi bi-facebook"></i></a>

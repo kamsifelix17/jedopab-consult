@@ -19,9 +19,22 @@
     <div class="fixed top-0 w-full z-50 pt-4 px-4 transition-all duration-300">
         <header class="max-w-6xl mx-auto bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-gray-100 px-6 py-3">
             <div class="flex justify-between items-center h-12">
-                <!-- Logo scaled down to allow company name to stand out -->
-                <div class="flex-shrink-0 transition-transform hover:scale-105 duration-300">
-                    <a href="index.html"><img src="images/logo.png" alt="Jedopab Consult Limited" class="h-8 md:h-10 w-auto" onerror="this.outerHTML='<span class=\'font-extrabold text-xl tracking-wider text-brand-navy\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT LIMITED</span></span>'"></a>
+                <!-- Logo (Icon + HTML Typography) -->
+                <div class="flex-shrink-0 z-20">
+                    <a href="index.html" class="flex items-center gap-2 sm:gap-3 group">
+                        <!-- The Canva Icon Only -->
+                        <img src="images/logo.png" alt="Jedopab Icon" class="h-8 md:h-11 w-auto transition-transform group-hover:scale-105 duration-300">
+        
+                        <!-- The HTML Typography -->
+                        <div class="flex flex-col justify-center mt-1">
+                            <span class="font-extrabold text-lg md:text-2xl tracking-widest text-brand-navy leading-none mb-1">
+                                JEDOPAB
+                            </span>
+                            <span class="font-bold text-[9px] md:text-[11px] tracking-[0.15em] text-brand-gold uppercase leading-none">
+                                Consult Limited
+                            </span>
+                        </div>
+                    </a>
                 </div>
                 <nav class="hidden md:flex space-x-8 font-bold text-sm items-center">
                     <a href="index.html" class="text-gray-500 hover:text-brand-navy transition">Home</a>
@@ -62,7 +75,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
                 <!-- Service 1 -->
                 <div id="training" class="flex flex-col lg:block relative scroll-mt-32">
-                    <div class="w-full lg:w-3/4 h-[550px] lg:h-[650px]"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Training" class="w-full h-full object-cover rounded-3xl shadow-xl"></div>
+                    <div class="w-full lg:w-3/4 h-[550px] lg:h-[650px]"><img src="images/gallery-1.jpg" alt="Training" class="w-full h-full object-cover rounded-3xl shadow-xl"></div>
                     <div class="w-full lg:w-1/2 bg-white rounded-3xl shadow-[0_20px_50px_rgba(10,31,68,0.1)] p-8 md:p-12 -mt-20 lg:mt-0 relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 border border-gray-100 z-10 max-w-[calc(100%-2rem)] mx-auto lg:max-w-none">
                         <div class="w-14 h-14 bg-brand-light text-brand-gold rounded-2xl flex items-center justify-center mb-6"><span class="font-black text-2xl">01</span></div>
                         <h3 class="text-3xl font-extrabold text-brand-navy mb-4">Training & Human Capacity Development</h3>
@@ -85,7 +98,7 @@
                 </div>
                 <!-- Service 2 -->
                 <div id="consultancy" class="flex flex-col lg:block relative scroll-mt-32">
-                    <div class="w-full lg:w-3/4 h-[550px] lg:h-[650px] lg:ml-auto"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Consultancy" class="w-full h-full object-cover rounded-3xl shadow-xl"></div>
+                    <div class="w-full lg:w-3/4 h-[550px] lg:h-[650px] lg:ml-auto"><img src="images/gallery-12.jpg" alt="Consultancy" class="w-full h-full object-cover rounded-3xl shadow-xl"></div>
                     <div class="w-full lg:w-1/2 bg-white rounded-3xl shadow-[0_20px_50px_rgba(10,31,68,0.1)] p-8 md:p-12 -mt-20 lg:mt-0 relative lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 border border-gray-100 z-10 max-w-[calc(100%-2rem)] mx-auto lg:max-w-none">
                         <div class="w-14 h-14 bg-brand-light text-brand-gold rounded-2xl flex items-center justify-center mb-6"><span class="font-black text-2xl">02</span></div>
                         <h3 class="text-3xl font-extrabold text-brand-navy mb-4">Organizational Consultancy</h3>
@@ -105,6 +118,38 @@
                         <a href="contact.html" class="inline-block bg-brand-navy text-white px-8 py-3 rounded-full font-bold hover:bg-brand-deep transition shadow-lg">Consult With Us</a>
                     </div>
                 </div>
+                <!-- Service 3: Project Management -->
+                <div id="project-management" class="flex flex-col lg:block relative scroll-mt-32">
+                    <div class="w-full lg:w-3/4 h-[550px] lg:h-[650px]"><img src="images/gallery-10.jpg" alt="Project Management" class="w-full h-full object-cover rounded-3xl shadow-xl"></div>
+                    <div class="w-full lg:w-1/2 bg-white rounded-3xl shadow-[0_20px_50px_rgba(10,31,68,0.1)] p-8 md:p-12 -mt-20 lg:mt-0 relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 border border-gray-100 z-10 max-w-[calc(100%-2rem)] mx-auto lg:max-w-none">
+                        <div class="w-14 h-14 bg-brand-light text-brand-gold rounded-2xl flex items-center justify-center mb-6"><span class="font-black text-2xl">03</span></div>
+                        <h3 class="text-3xl font-extrabold text-brand-navy mb-4">Project Management</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Ensure seamless execution of your projects. From initial planning through to execution, we translate complex plans into action with a focus on accountability.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start"><i class="bi bi-check-circle-fill text-brand-gold mr-3 mt-1"></i><span class="text-gray-700 font-medium">Project Management & Content Execution</span></li>
+                            <li class="flex items-start"><i class="bi bi-check-circle-fill text-brand-gold mr-3 mt-1"></i><span class="text-gray-700 font-medium">Professional accountability and reporting</span></li>
+                            <li class="flex items-start"><i class="bi bi-check-circle-fill text-brand-gold mr-3 mt-1"></i><span class="text-gray-700 font-medium">High operational efficiency</span></li>
+                            <li class="flex items-start"><i class="bi bi-check-circle-fill text-brand-gold mr-3 mt-1"></i><span class="text-gray-700 font-medium">Information Technology & Digital Services</span></li>
+                        </ul>
+                        <a href="contact.html" class="inline-block bg-brand-navy text-white px-8 py-3 rounded-full font-bold hover:bg-brand-deep transition shadow-lg">Manage Your Project</a>
+                    </div>
+                </div>
+                <!-- Service 4: Supply & Logistics -->
+                <div id="logistics" class="flex flex-col lg:block relative scroll-mt-32">
+                    <div class="w-full lg:w-3/4 h-[550px] lg:h-[650px] lg:ml-auto"><img src="images/gallery-2.jpg" alt="Logistics" class="w-full h-full object-cover rounded-3xl shadow-xl"></div>
+                    <div class="w-full lg:w-1/2 bg-white rounded-3xl shadow-[0_20px_50px_rgba(10,31,68,0.1)] p-8 md:p-12 -mt-20 lg:mt-0 relative lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 border border-gray-100 z-10 max-w-[calc(100%-2rem)] mx-auto lg:max-w-none">
+                        <div class="w-14 h-14 bg-brand-light text-brand-gold rounded-2xl flex items-center justify-center mb-6"><span class="font-black text-2xl">04</span></div>
+                        <h3 class="text-3xl font-extrabold text-brand-navy mb-4">Supply & Logistics</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Reliable procurement of materials and cost-effective distribution solutions. We deliver supplies and manage logistics chains meeting your specific operational needs.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start"><i class="bi bi-check-circle-fill text-brand-gold mr-3 mt-1"></i><span class="text-gray-700 font-medium">Procurement & General Supplies</span></li>
+                            <li class="flex items-start"><i class="bi bi-check-circle-fill text-brand-gold mr-3 mt-1"></i><span class="text-gray-700 font-medium">Agricultural Products Marketing & Distribution</span></li>
+                            <li class="flex items-start"><i class="bi bi-check-circle-fill text-brand-gold mr-3 mt-1"></i><span class="text-gray-700 font-medium">Heavy/Light Weight Public Infrastructure</span></li>
+                            <li class="flex items-start"><i class="bi bi-check-circle-fill text-brand-gold mr-3 mt-1"></i><span class="text-gray-700 font-medium">Property & Estate Management</span></li>
+                        </ul>
+                        <a href="contact.html" class="inline-block bg-brand-navy text-white px-8 py-3 rounded-full font-bold hover:bg-brand-deep transition shadow-lg">Request Logistics</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -115,6 +160,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div class="lg:pr-8">
                     <a href="index.html" class="inline-block mb-6 transition-transform hover:scale-105 duration-300"><img src="images/logo-footer.png" alt="Jedopab Consult Limited" class="h-12 w-auto" onerror="this.outerHTML='<span class=\'text-white text-2xl font-extrabold\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT LIMITED</span></span>'"></a>
+                    <h3 class="text-white text-2xl font-extrabold tracking-wider mb-6">JEDOPAB <span class="text-brand-gold block text-sm tracking-[0.15em] mt-1">CONSULT LIMITED</span></h3>
                     <p class="text-sm text-gray-400 mb-8">Reliable capability development, strategic consulting, project management and supply chain solutions across Nigeria and beyond.</p>
                     <div class="flex space-x-3">
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition text-lg"><i class="bi bi-facebook"></i></a>

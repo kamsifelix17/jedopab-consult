@@ -19,9 +19,22 @@
     <div class="fixed top-0 w-full z-50 pt-4 px-4 transition-all duration-300">
         <header class="max-w-6xl mx-auto bg-white/95 backdrop-blur-md rounded-full shadow-lg border border-gray-100 px-6 py-3">
             <div class="flex justify-between items-center h-12">
-                <!-- Logo scaled down to allow company name to stand out -->
-                <div class="flex-shrink-0 transition-transform hover:scale-105 duration-300">
-                    <a href="index.html"><img src="images/logo.png" alt="Jedopab Consult Limited" class="h-8 md:h-10 w-auto" onerror="this.outerHTML='<span class=\'font-extrabold text-xl tracking-wider text-brand-navy\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT LIMITED</span></span>'"></a>
+                <!-- Logo (Icon + HTML Typography) -->
+                <div class="flex-shrink-0 z-20">
+                    <a href="index.html" class="flex items-center gap-2 sm:gap-3 group">
+                        <!-- The Canva Icon Only -->
+                        <img src="images/logo.png" alt="Jedopab Icon" class="h-8 md:h-11 w-auto transition-transform group-hover:scale-105 duration-300">
+        
+                        <!-- The HTML Typography -->
+                        <div class="flex flex-col justify-center mt-1">
+                            <span class="font-extrabold text-lg md:text-2xl tracking-widest text-brand-navy leading-none mb-1">
+                                JEDOPAB
+                            </span>
+                            <span class="font-bold text-[9px] md:text-[11px] tracking-[0.15em] text-brand-gold uppercase leading-none">
+                                Consult Limited
+                            </span>
+                        </div>
+                    </a>
                 </div>
                 <nav class="hidden md:flex space-x-8 font-bold text-sm items-center">
                     <a href="index.html" class="text-gray-500 hover:text-brand-navy transition">Home</a>
@@ -80,22 +93,34 @@
                         <!-- FORMSPREE ACTION -->
                         <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-6 mt-8">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div><label class="block text-sm font-bold text-gray-700 mb-2">Full Name</label><input type="text" name="name" required class="w-full bg-slate-50 rounded-2xl px-5 py-4 text-sm focus:ring-2 focus:ring-brand-navy outline-none"></div>
-                                <div><label class="block text-sm font-bold text-gray-700 mb-2">Organization</label><input type="text" name="organization" class="w-full bg-slate-50 rounded-2xl px-5 py-4 text-sm focus:ring-2 focus:ring-brand-navy outline-none"></div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
+                                    <input type="text" name="name" required class="w-full bg-white border border-gray-300 rounded-2xl px-5 py-4 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-brand-navy focus:border-brand-navy outline-none shadow-sm transition">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Organization</label>
+                                    <input type="text" name="organization" class="w-full bg-white border border-gray-300 rounded-2xl px-5 py-4 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-brand-navy focus:border-brand-navy outline-none shadow-sm transition">
+                                </div>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div><label class="block text-sm font-bold text-gray-700 mb-2">Email</label><input type="email" name="email" required class="w-full bg-slate-50 rounded-2xl px-5 py-4 text-sm focus:ring-2 focus:ring-brand-navy outline-none"></div>
-                                <div><label class="block text-sm font-bold text-gray-700 mb-2">Phone</label><input type="tel" name="phone" class="w-full bg-slate-50 rounded-2xl px-5 py-4 text-sm focus:ring-2 focus:ring-brand-navy outline-none"></div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Email</label>
+                                    <input type="email" name="email" required class="w-full bg-white border border-gray-300 rounded-2xl px-5 py-4 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-brand-navy focus:border-brand-navy outline-none shadow-sm transition">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Phone</label>
+                                    <input type="tel" name="phone" class="w-full bg-white border border-gray-300 rounded-2xl px-5 py-4 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-brand-navy focus:border-brand-navy outline-none shadow-sm transition">
+                                </div>
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-2">Message</label>
-                                <textarea name="message" rows="4" required class="w-full bg-slate-50 rounded-2xl px-5 py-4 text-sm focus:ring-2 focus:ring-brand-navy outline-none resize-none"></textarea>
+                                <textarea name="message" rows="4" required class="w-full bg-white border border-gray-300 rounded-2xl px-5 py-4 text-sm text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-brand-navy focus:border-brand-navy outline-none shadow-sm transition resize-none"></textarea>
                             </div>
                             <div class="pt-2 flex flex-col sm:flex-row gap-4 items-center">
                                 <button type="submit" class="w-full sm:w-auto bg-brand-gold text-brand-navy px-10 py-4 rounded-full font-extrabold hover:bg-yellow-500 transition shadow-[0_8px_20px_rgb(212,175,55,0.3)] flex items-center justify-center gap-2">
                                     Send Message <i class="bi bi-chat-text text-lg"></i>
                                 </button>
-                                <a href="https://wa.me/2348066555802" target="_blank" class="w-full sm:w-auto bg-white border-2 border-[#25D366] text-[#25D366] px-8 py-4 rounded-full font-extrabold hover:bg-[#25D366] hover:text-white transition flex items-center justify-center gap-2">
+                                <a href="https://wa.me/23408035175743" target="_blank" class="w-full sm:w-auto bg-white border-2 border-[#25D366] text-[#25D366] px-8 py-4 rounded-full font-extrabold hover:bg-[#25D366] hover:text-white transition flex items-center justify-center gap-2">
                                     <i class="bi bi-whatsapp text-lg"></i> WhatsApp
                                 </a>
                             </div>
@@ -112,6 +137,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div class="lg:pr-8">
                     <a href="index.html" class="inline-block mb-6 transition-transform hover:scale-105 duration-300"><img src="images/logo-footer.png" alt="Jedopab Consult Limited" class="h-12 w-auto" onerror="this.outerHTML='<span class=\'text-white text-2xl font-extrabold\'>JEDOPAB <span class=\'text-brand-gold\'>CONSULT LIMITED</span></span>'"></a>
+                    <h3 class="text-white text-2xl font-extrabold tracking-wider mb-6">JEDOPAB <span class="text-brand-gold block text-sm tracking-[0.15em] mt-1">CONSULT LIMITED</span></h3>
                     <p class="text-sm text-gray-400 mb-8">Reliable capability development, strategic consulting, project management and supply chain solutions across Nigeria and beyond.</p>
                     <div class="flex space-x-3">
                         <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition text-lg"><i class="bi bi-facebook"></i></a>
