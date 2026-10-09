@@ -63,47 +63,66 @@
     </div>
 
     <main class="min-h-screen">
+        <!-- HERO SECTION -->
         <section class="bg-brand-navy pt-32 pb-24 border-b-4 border-brand-gold relative overflow-hidden">
             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Team" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30">
             <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-deep rounded-full blur-[100px] opacity-20 -translate-y-1/2 translate-x-1/3"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">About JEDOPAD Consult Limited</h1>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">About JEDOPAB Consult Limited</h1>
                 <p class="text-xl text-gray-300 max-w-2xl mx-auto font-light">A trusted partner for organizations seeking sustainable growth through capability building, strategy, and execution.</p>
             </div>
         </section>
 
-        <section class="bg-slate-50 pt-20 pb-24">
+        <!-- CEO MESSAGE SECTION (Fixed Layout) -->
+        <section class="bg-slate-50 py-20 lg:py-28">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-0 lg:relative">
-                    <div class="w-full lg:w-3/5 lg:relative z-10">
+                
+                <div class="flex flex-col lg:flex-row gap-12 xl:gap-16 items-start">
+                    
+                    <!-- CEO Image Container -->
+                    <div class="w-full lg:w-5/12 lg:sticky lg:top-32">
                         <div class="rounded-3xl overflow-hidden shadow-2xl relative">
-                            <img src="images/ceo.png" alt="CEO" class="w-full h-[500px] object-cover object-top">
-                            <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg border border-white/20">
-                                <p class="font-bold text-brand-navy text-lg">Adedotun Oluwatosin</p>
-                                <p class="text-brand-gold text-sm font-bold">Founder & CEO</p>
+                            <!-- Notice: Removed the fixed h-[500px] so the image scales naturally -->
+                            <img src="images/ceo.png" alt="CEO" class="w-full h-auto object-cover object-top border-4 border-white">
+                            <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg border border-white/20">
+                                <p class="font-bold text-brand-navy text-xl">Adedotun Oluwatosin</p>
+                                <p class="text-brand-gold text-sm font-bold tracking-wide">Founder & CEO</p>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/2 lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 z-20">
-                        <div class="bg-white p-10 md:p-14 rounded-3xl shadow-[0_20px_50px_rgba(10,31,68,0.1)] border border-gray-100">
-                            <span class="text-brand-deep font-bold tracking-widest uppercase text-sm mb-4 block">Message from the CEO</span>
-                            <div class="space-y-4 text-gray-600 mb-8 leading-relaxed">
-                                <p>Welcome to JEDOPAB Consult Limited, where we are committed to Developing People, Transforming Organizations, and Delivering Impact.</p>
+
+                    <!-- CEO Message Container (Removed Absolute Positioning) -->
+                    <div class="w-full lg:w-7/12">
+                        <div class="bg-white p-8 md:p-12 xl:p-14 rounded-3xl shadow-[0_20px_50px_rgba(10,31,68,0.05)] border border-gray-100 h-full">
+                            
+                            <span class="text-brand-deep font-bold tracking-widest uppercase text-sm mb-6 block border-b border-gray-100 pb-4">Message from the CEO</span>
+                            
+                            <div class="space-y-5 text-gray-600 text-base lg:text-lg leading-relaxed font-light">
+                                <p>Welcome to <strong class="font-bold text-brand-navy">JEDOPAB Consult Limited</strong>, where we are committed to Developing People, Transforming Organizations, and Delivering Impact.</p>
+                                
                                 <p>In today's rapidly changing business environment, organizations need more than ideas—they need the right knowledge, capabilities, strategies, and reliable execution to achieve sustainable growth.</p>
+                                
                                 <p>At JEDOPAB Consult Limited, we provide integrated Training & Consultancy, Project Management, and Supply & Logistics solutions designed to address the evolving needs of individuals, businesses, and organizations. At JEDOPAB Consult Limited, all our trainers and faculties are CMD-accredited, and all our consultants are certified in their various fields with both local and international certifications.</p>
+                                
                                 <p>Our approach is driven by integrity, professionalism, excellence, innovation, and measurable results. We work closely with our clients both in public and privates sectors to understand their unique challenges and provide practical, customized solutions that create lasting value.</p>
+                                
                                 <p>As we grow, our ambition is to build a trusted brand with local relevance and global standards, creating meaningful impact through people development, organizational transformation, and effective service delivery in all spheres of human endeavors.</p>
+                                
                                 <p>We invite you to partner with us as we turn knowledge into capability, strategies into action, and opportunities into sustainable results.</p>
-                                <p>Welcome to JEDOPAB Consult Limited.</p>
-        
-                                <!-- CEO Signature Block -->
-                                <div class="mt-6 pt-6 border-t border-gray-100">
-                                    <p class="font-extrabold text-brand-navy text-lg">Adedotun Oluwatosin. <span class="font-normal text-gray-500 italic text-sm">BSc, MSc, SPHRi, FIMC, FITD, ACIPM.</span></p>
-                                    <p class="font-bold text-brand-gold text-sm italic">Chief Executive Officer / Lead Consultant</p>
-                                </div>
+                                
+                                <p class="font-medium text-brand-navy pb-4">Welcome to JEDOPAB Consult Limited.</p>
                             </div>
+
+                            <!-- CEO Signature Block -->
+                            <div class="mt-8 pt-8 border-t border-gray-100 bg-slate-50 p-6 rounded-2xl">
+                                <p class="font-extrabold text-brand-navy text-xl mb-1">Adedotun Oluwatosin.</p>
+                                <p class="font-medium text-gray-500 text-sm mb-2">BSc, MSc, SPHRi, FIMC, FITD, ACIPM.</p>
+                                <p class="font-bold text-brand-gold text-sm uppercase tracking-wider">Chief Executive Officer / Lead Consultant</p>
+                            </div>
+
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -119,8 +138,10 @@
             <img src="images/gallery-13.jpg" alt="Team Training" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
             <img src="images/gallery-3.jpg" alt="Corporate Event" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
             <img src="images/gallery-11.jpg" alt="Awards" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
-            <img src="images/gallery-4.jpg" alt="Board Meeting" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
-            <img src="images/gallery-5.jpg" alt="Capacity Building" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <img src="images/gallery-2.jpg" alt="Board Meeting" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <img src="images/gallery-7.jpg" alt="Capacity Building" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <img src="images/gallery-10.jpg" alt="Recognition" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <img src="images/gallery-5.jpg" alt="Recognition" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
             <img src="images/gallery-6.jpg" alt="Recognition" class="rounded-2xl shadow-md w-full h-64 object-cover object-top hover:shadow-xl hover:-translate-y-1 transition duration-300">
             
             <!-- Optional CTA Card inside the Gallery -->
